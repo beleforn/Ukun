@@ -1,0 +1,429 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+:root{
+    --main-color:#d3ad7f;
+    --black:#13131a;
+    --bg:#010103;
+    --border:.1rem solid rgba(255,255,255,.3);
+}
+*{
+    font-family: 'Roboto', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border:none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+html::-webkit-scrollbar{
+    width: .8rem;
+}
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+html::-webkit-scrollbar-thumb{
+    background: #fff;
+    border-radius: 5rem;
+}
+body{
+    background: var(--bg);
+}
+section{
+    padding:2rem 7%;
+}
+.heading{
+    text-align: center;
+    color:#fff;
+    text-transform: uppercase;
+    padding-bottom: 3.5rem;
+    font-size: 4rem;
+}
+.heading span{
+    color:var(--main-color);
+    text-transform: uppercase;
+}
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding:.9rem 3rem;
+    font-size: 1.7rem;
+    color:#fff;
+    background: var(--main-color);
+    cursor: pointer;
+}
+.btn:hover{
+    letter-spacing: .2rem;
+}
+.header{
+    background: var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:1.5rem 7%;
+    border-bottom: var(--border);
+    position: fixed;
+    top:0; left: 0; right: 0;
+    z-index: 1000;
+}
+.header .logo img{
+    height: 6rem;
+}
+.header .navbar a{
+    margin:0 1rem;
+    font-size: 1.6rem;
+    color:#fff;
+}
+.header .navbar a:hover{
+    color:var(--main-color);
+    border-bottom: .1rem solid var(--main-color);
+    padding-bottom: .5rem;
+}
+.header .icons div{
+    color:#fff;
+    cursor: pointer;
+    font-size: 2.5rem;
+    margin-left: 2rem;
+}
+.header .icons div:hover{
+    color:var(--main-color);
+}
+#menu-btn{
+    display: none;
+}
+/*------------------------------fin del menu ----------------------*/
+
+/*----------------------------seccion de nuestros proyectos ---------------------------- */
+
+.products .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap:1.5rem;
+}
+.products .box-container .box{
+    text-align: center;
+    border:var(--border);
+    padding: 2rem;
+}
+.products .box-container .box .icons a{
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    border:var(--border);
+    color:#fff;
+    margin:.3rem;
+}
+.products .box-container .box .icons a:hover{
+    background:var(--main-color);
+}
+.products .box-container .box .image{
+    padding: 2.5rem 0;
+}
+.products .box-container .box .image img{
+    height: 25rem;
+}
+.products .box-container .box .content h3{
+    color:#fff;
+    font-size: 2.5rem;
+}
+.products .box-container .box .content .stars{
+    padding: 1.5rem;
+}
+.products .box-container .box .content .stars i{
+    font-size: 1.7rem;
+    color: var(--main-color);
+}
+.products .box-container .box .content .price{
+    color:#fff;
+    font-size: 2.5rem;
+}
+.products .box-container .box .content .price span{
+    text-decoration: line-through;
+    font-weight: lighter;
+    font-size: 1.5rem;
+}
+/*----------------------------fin de seccion de nuestros proyectos ---------------------------- */
+/* -------------------Estilos para la ventana modal--------------------- */
+
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed; 
+    z-index: 2000; /* Más alto que otros elementos */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7); /* Fondo semi-transparente */
+    display: flex; /* Alinea el contenido de la modal */
+    align-items: center; /* Centra verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+}
+.modal-content {
+    background-color: black;
+    width: 90%; /* Tamaño más grande */
+    max-width: 1024px; /* Anchura máxima de 1024px */
+    height: 768px; /* Altura fija de 768px */
+    position: relative;
+    padding: 40px; /* Espaciado interno mayor */
+    border: 1px solid #888;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column; /* Alinea el contenido en columna */
+    justify-content: flex-start; /* Alinea el texto en la parte superior */
+}
+.close {
+    color: #aaa;
+    position: absolute; /* Posiciona el botón de cerrar */
+    top: 15px; /* Margen desde la parte superior */
+    right: 20px; /* Margen desde la derecha */
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Slider de imágenes */
+.slider {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: nowrap; /* Evita que las imágenes se vayan a la siguiente línea */
+}
+
+.slider-image {
+    width: 100%;
+    flex-shrink: 0; /* Evita que las imágenes se reduzcan al cambiar entre ellas */
+    transition: transform 0.5s ease;
+}
+
+
+.slider-controls {
+    position: absolute;
+    top: 50%;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.slider-controls button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.slider-controls button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Texto debajo del slider */
+.modal-text {
+    text-align: center;
+    margin-top: 80px;
+}
+
+.modal-text .title {
+    font-weight: bold;
+    font-size: 50px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.modal-text span {
+    display: block;
+    margin-top: 5px;
+    font-size: 14px;
+    color: rgb(226, 198, 146);
+}
+
+.modal-text p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: white;
+}
+
+
+/* ------------fin de Estilos para la ventana modal ------------------------*/
+
+/*----------------------------pie de pagina ---------------------------- */
+
+.footer{
+    background:var(--black);
+    text-align: center;
+}
+.footer .share{
+    padding:1rem 0;
+}
+.footer .share a{
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    color:#fff;
+    border:var(--border);
+    margin:.3rem;
+    border-radius: 50%;
+}
+.footer .share a:hover{
+    background-color: var(--main-color);
+}
+.footer .links{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding:2rem 0;
+    gap:1rem;
+}
+.footer .links a{
+    padding:.7rem 2rem;
+    color:#fff;
+    border:var(--border);
+    font-size: 2rem;
+}
+.footer .links a:hover{
+    background:var(--main-color);
+}
+.footer .credit{
+    font-size: 2rem;
+    color:#fff;
+    font-weight: lighter;
+    padding:1.5rem;
+}
+.footer .credit span{
+    color:var(--main-color);
+}
+
+/*---------------------------fin de pie de pagina ---------------------------- */
+
+/*---------------------------responsive de pagina ---------------------------- */
+@media (max-width:991px){
+    html{
+        font-size: 55%;
+    }
+    .header{
+        padding:1.5rem 2rem;
+    }
+    section{
+        padding:2rem;
+    }
+}
+@media (max-width:768px){
+    #menu-btn{
+        display: inline-block;
+    }
+    .header .navbar{
+        position: absolute;
+        top:100%; right: -100%;
+        background: #fff;
+        width: 30rem;
+        height: calc(100vh - 9.5rem);
+    }
+    .header .navbar.active{
+        right:0;
+    }
+    .header .navbar a{
+        color:var(--black);
+        display: block;
+        margin:1.5rem;
+        padding:.5rem;
+        font-size: 2rem;
+    }
+    .header .search-form{
+        width: 90%;
+        right: 2rem;
+    }
+}
+@media (max-width:450px){
+    html{
+        font-size: 50%;
+    }
+}
+
+
+/*---------------------------boton de wahtsap-------------------*/
+.whatsapp_float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    color: white;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 100;
+}
+
+.whatsapp_float i {
+    margin-top: 15px;
+}
+
+@media (max-width: 768px) {
+    .whatsapp_float {
+        width: 50px;
+        height: 50px;
+        font-size: 25px;
+        bottom: 15px;
+        right: 15px;
+    }
+
+    .whatsapp_float i {
+        margin-top: 10px;
+    }
+}
+
+.whatsapp_float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    color: white;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 100;
+    transition: transform 0.3s ease-in-out;
+}
+
+.whatsapp_float i {
+    margin-top: 15px;
+}
+
+.whatsapp_float:hover {
+    transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+    .whatsapp_float {
+        width: 50px;
+        height: 50px;
+        font-size: 25px;
+        bottom: 15px;
+        right: 15px;
+    }
+
+    .whatsapp_float i {
+        margin-top: 10px;
+    }
+}

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseño UKUN</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="style5.css">
+
+</head>
+<body>
+    
+<!-- Seccion de menu  -->
+
+<header class="header">
+
+    <a href="#" class="logo">
+        <img src="logo.png" alt="">
+    </a>
+
+    <nav class="navbar">
+        <a href="index.html">Inicio</a>
+        <a href="Nosotros.html">Nosotros</a>
+        <a href="Producto.html">Productos</a>
+        <a href="Proyectos.html">Proyectos</a>
+        <a href="Contacto.html">Contacto</a>
+        
+    </nav>
+
+    <div class="icons">
+       
+        <div class="fas fa-bars" id="menu-btn"></div>
+    </div> 
+
+</header>
+
+<!-- Fin de la seccion de menu -->
+
+<!-- Conexion de titulo de nuestros ... checalo  "  -->
+
+<section class="about" id="about">
+
+    <h1 class="heading"> <span>Quienes</span> Somos </h1>
+
+</section>
+
+<!-- Fin  de conexion -->
+
+
+<!-- Sección de Proyectos -->
+
+<section class="products" id="products">
+    <h1 class="heading"> Nuestros <span>Proyectos</span> </h1>
+
+    <div class="box-container">
+        <div class="box">
+            <div class="icons">
+                <a href="#" class="fas fa-eye" onclick="openModal('modal1')"></a>
+            </div>
+            <!-- Ventana Modal 1 -->
+<div id="modal1" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('modal1')">&times;</span>
+        <h2>IMPLEMENTACIÓN DE MUEBLES</h2>
+
+        <!-- Slider de imágenes -->
+        <div class="slider">
+            <img class="slider-image" src="slider.jpg" alt="Imagen1">
+            <img class="slider-image" src="slider3.jpg" alt="Imagen2">
+            <img class="slider-image" src="slider2.jpg" alt="Imagen3">
+        </div>
+
+        <!-- Controles del slider -->
+        <div class="slider-controls">
+            <button class="prev" onclick="prevSlide()">&#10094;</button>
+            <button class="next" onclick="nextSlide()">&#10095;</button>
+        </div>
+
+        <!-- Texto debajo del slider -->
+        <div class="modal-text">
+            <a href="#" class="title">Proyecto</a>
+            <span>Lucia / 21 de mayo, 2021</span>
+            <p>El mejor equipo y el mejor acabado</p>
+        </div>
+    </div>
+</div>
+
+            <div class="image">
+                <img src="product-1.png" alt="">
+            </div>
+            <div class="content">
+                <h3>IMPLEMENTACION DE MUEBLES </h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="icons">
+                <a href="#" class="fas fa-eye" onclick="openModal('modal2')"></a>
+            </div>
+           <!-- Ventana Modal 2 -->
+                <div id="modal2" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal('modal2')">&times;</span>
+                        <h2>EJECUCION DE COCINA</h2>
+                        <p>Descripción</p>
+                    </div>
+                </div>
+            <div class="image">
+                <img src="product-2.png" alt="">
+            </div>
+            <div class="content">
+                <h3>EJECUCION DE COCINA</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="icons">
+                <a href="#" class="fas fa-eye" onclick="openModal('modal3')"></a>
+            </div>
+                        <!-- Ventana Modal 3 -->
+            <div id="modal3" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('modal3')">&times;</span>
+                    <h2>COCINA MINIMALISTA ELEGANTE</h2>
+                    <p>Descripción</p>
+                </div>
+            </div>
+            <div class="image">
+                <img src="product-3.png" alt="">
+            </div>
+            <div class="content">
+                <h3>COCINA MINIMALISTA ELEGANTE</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Fin de Sección de Proyectos -->
+
+<!-- Seccion de Pie de Pagina   -->
+
+<section class="footer">
+
+    <div class="share">
+        <a href="https://www.facebook.com/profile.php?id=100092439151015" class="fab fa-facebook-f"></a>
+        <a href="https://www.tiktok.com/@estudio.ukun" class="fab fa-tiktok"></a>
+        <a href="https://www.instagram.com/estudioukun/" class="fab fa-instagram"></a>
+        
+    </div>
+
+    <div class="credit">DISEÑO DE INTERIORES <span>UKUN</span> | Todos los derechos reservados</div>
+
+</section>
+
+<!-- Fin de Seccion de Pie de Pagina   -->
+
+<a href="https://wa.me/988240890" class="whatsapp_float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+
+
+<!-- ENLACE DE JS ESTILO EN JAVA   -->
+<script src="script5.js"></script>
+
+</body>
+</html>
+
